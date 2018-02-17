@@ -1,3 +1,7 @@
 {
-  "extends": ["airbnb", "prettier"]
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "prettier"],
+  "rules": {
+    "react/prop-types": 0
+  }
 }
