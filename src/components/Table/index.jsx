@@ -40,7 +40,9 @@ class Table extends React.Component {
       <tbody>
         {sortBy(this.props.items, this.state.sortBy).map((item) => (
           <tr key={item.id}>
-            <td>{item.done ? '\u2714' : ''}</td>
+            <td>
+              <input type="checkbox" checked={item.done} />
+            </td>
             <td>{item.title}</td>
             <td>{Table.renderPriority(item.priority)}</td>
             <td>{item.date.toLocaleDateString('en-US')}</td>
